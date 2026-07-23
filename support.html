@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Hungry for Stars</title>
+<meta name="description" content="Player support and contact for Hungry for Stars. Report a bug, ask a question, or send an idea.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23712a23'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23f4d9b0'%3E%E2%98%85%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --desk:#233329;--desk-deep:#1a2720;
+    --paper:#f3ead6;--paper-lo:#ece0c6;
+    --ink:#241d13;--ink-soft:#5f5340;--ink-faint:#8a7c62;
+    --rule:#cabd9c;
+    --gold:#94742b;--gold-bright:#b18f3d;
+    --seal:#712a23;--seal-hi:#93463b;
+    --fill:#efe4cb;
+    --shadow:rgba(20,14,6,.38);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --desk:#0f130f;--desk-deep:#0a0d0a;
+      --paper:#1d1810;--paper-lo:#241d12;
+      --ink:#ece2cb;--ink-soft:#b6a988;--ink-faint:#8b7f64;
+      --rule:#3b3222;
+      --gold:#c8a24e;--gold-bright:#dcb862;
+      --seal:#8a362d;--seal-hi:#b0554a;
+      --fill:#241d12;
+      --shadow:rgba(0,0,0,.55);
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{background:var(--desk);}
+  body{
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    color:var(--ink);
+    min-height:100dvh;
+    padding:clamp(16px,4vw,54px) 16px;
+    background:
+      radial-gradient(120% 90% at 50% -10%, rgba(255,255,255,.05), transparent 55%),
+      radial-gradient(140% 120% at 50% 120%, var(--desk-deep), transparent 60%),
+      var(--desk);
+    display:flex;flex-direction:column;align-items:center;
+    -webkit-font-smoothing:antialiased;
+  }
+  .sheet{
+    position:relative;width:100%;max-width:660px;
+    background:
+      repeating-linear-gradient(0deg, transparent 0 27px, rgba(120,96,48,.035) 27px 28px),
+      radial-gradient(130% 100% at 50% 0%, var(--paper) 55%, var(--paper-lo) 100%);
+    border:1px solid var(--rule);border-radius:4px;
+    box-shadow:0 1px 0 rgba(255,255,255,.10) inset,
+               0 22px 50px -22px var(--shadow),
+               0 3px 10px -4px var(--shadow);
+    padding:clamp(26px,5vw,52px) clamp(22px,5.2vw,60px) clamp(24px,4vw,44px);
+  }
+  .sheet::before{
+    content:"";position:absolute;inset:11px;
+    border:1px solid rgba(148,116,43,.34);
+    border:1px solid color-mix(in srgb, var(--gold) 34%, transparent);
+    border-radius:2px;pointer-events:none;
+  }
+  .head{
+    display:flex;flex-direction:column;align-items:center;text-align:center;
+    gap:12px;padding-bottom:20px;margin-bottom:26px;
+    border-bottom:1px solid var(--rule);
+  }
+  .seal{
+    width:58px;height:58px;border-radius:50%;
+    display:grid;place-items:center;
+    color:#f4d9b0;font-size:1.5rem;
+    background:
+      radial-gradient(60% 55% at 38% 32%, var(--seal-hi), transparent 70%),
+      radial-gradient(120% 120% at 50% 120%, #4c1a15, var(--seal) 60%);
+    box-shadow:0 2px 6px -1px rgba(0,0,0,.5),
+               0 1px 1px rgba(255,255,255,.25) inset;
+    text-shadow:0 1px 1px rgba(0,0,0,.45);
+  }
+  .eyebrow{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,ui-sans-serif,sans-serif;
+    text-transform:uppercase;letter-spacing:.26em;
+    font-size:.62rem;font-weight:600;color:var(--ink-faint);
+  }
+  .brand{
+    font-size:clamp(1.55rem,4.4vw,2.15rem);
+    letter-spacing:.015em;line-height:1.05;text-wrap:balance;
+    font-weight:400;
+  }
+  .brand .amp{color:var(--gold);font-style:italic;}
+  h1{
+    font-style:italic;font-weight:500;
+    font-size:clamp(1.4rem,3.6vw,1.75rem);
+    text-align:center;text-wrap:balance;
+  }
+  .lede{
+    max-width:56ch;margin:14px auto 0;
+    font-size:1.02rem;line-height:1.68;color:var(--ink-soft);
+    text-align:center;
+  }
+  .card{
+    max-width:60ch;margin:24px auto 4px;
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+    gap:12px 18px;
+    background:var(--fill);border:1px solid var(--rule);border-radius:3px;
+    padding:16px 20px;
+  }
+  .card .who{font-size:.95rem;color:var(--ink-soft);line-height:1.5;}
+  .card a.mail{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,ui-sans-serif,sans-serif;
+    font-weight:600;font-size:1rem;
+  }
+  section{max-width:60ch;margin:0 auto;}
+  .faq{max-width:60ch;margin:14px auto 0;list-style:none;}
+  .faq li{border-top:1px solid var(--rule);padding:15px 0;}
+  .faq li:last-child{border-bottom:1px solid var(--rule);}
+  .faq .q{font-weight:600;font-size:1.01rem;margin:0 0 5px;}
+  .faq .a{font-size:.97rem;line-height:1.62;color:var(--ink-soft);}
+  a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(148,116,43,.45);}
+  a:hover{color:var(--gold-bright);}
+  a:focus-visible{outline:2px solid var(--gold-bright);outline-offset:2px;}
+  .colophon{
+    margin-top:34px;padding-top:20px;
+    border-top:1px solid var(--rule);text-align:center;
+  }
+  .colophon nav{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,ui-sans-serif,sans-serif;
+    font-size:.8rem;margin-bottom:14px;
+  }
+  .sig{font-style:italic;font-size:1.15rem;}
+  .fine{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,ui-sans-serif,sans-serif;
+    font-size:.7rem;letter-spacing:.03em;color:var(--ink-faint);margin-top:6px;
+  }
+</style>
+</head>
+<body>
+  <main class="sheet">
+    <header class="head">
+      <div class="seal" aria-hidden="true">★</div>
+      <div>
+        <div class="eyebrow">A restaurant in letters</div>
+        <div class="brand">Hungry <span class="amp">for</span> Stars</div>
+      </div>
+    </header>
+
+    <h1>Support</h1>
+    <p class="lede">Need a hand, found a bug, or have a suggestion for the restaurant? You're in the right place.</p>
+
+    <div class="card">
+      <span class="who">Made by a small studio — we read every message and usually reply within a few days.</span>
+      <a class="mail" href="mailto:hungryforstarsgame@gmail.com">hungryforstarsgame@gmail.com</a>
+    </div>
+
+    <section>
+      <ul class="faq">
+        <li>
+          <p class="q">Where is my progress saved?</p>
+          <p class="a">On your device, locally. There's no cloud account, so deleting the app also deletes your save. Reinstalling starts a fresh restaurant.</p>
+        </li>
+        <li>
+          <p class="q">Do I need an internet connection to play?</p>
+          <p class="a">No. Hungry for Stars runs entirely offline.</p>
+        </li>
+        <li>
+          <p class="q">How do I report a bug?</p>
+          <p class="a">Email us a short description of what happened, plus your device model and iOS version. A screenshot helps a lot.</p>
+        </li>
+        <li>
+          <p class="q">Is any of my data collected?</p>
+          <p class="a">No — the app collects nothing. See the <a href="privacy.html">Privacy Policy</a> for the full details.</p>
+        </li>
+        <li>
+          <p class="q">I have an idea for the game.</p>
+          <p class="a">We'd love to hear it. Send it to the address above — feedback from players shapes what gets built next.</p>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="colophon">
+      <nav><a href="privacy.html">Privacy Policy →</a></nav>
+      <div class="sig">— L.C.</div>
+      <div class="fine">© 2026 Svenson Games. All rights reserved.</div>
+    </footer>
+  </main>
+</body>
+</html>

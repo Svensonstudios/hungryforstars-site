@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hungry for Stars — Svenson Games</title>
+<meta name="description" content="Hungry for Stars — the tasting-menu tycoon. Privacy policy and player support.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23712a23'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='%23f4d9b0'%3E%E2%98%85%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --desk:#233329;--desk-deep:#1a2720;
+    --paper:#f3ead6;--paper-lo:#ece0c6;
+    --ink:#241d13;--ink-soft:#5f5340;--ink-faint:#8a7c62;
+    --rule:#cabd9c;
+    --gold:#94742b;--gold-bright:#b18f3d;
+    --seal:#712a23;--seal-hi:#93463b;
+    --fill:#efe4cb;
+    --shadow:rgba(20,14,6,.38);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --desk:#0f130f;--desk-deep:#0a0d0a;
+      --paper:#1d1810;--paper-lo:#241d12;
+      --ink:#ece2cb;--ink-soft:#b6a988;--ink-faint:#8b7f64;
+      --rule:#3b3222;
+      --gold:#c8a24e;--gold-bright:#dcb862;
+      --seal:#8a362d;--seal-hi:#b0554a;
+      --fill:#241d12;
+      --shadow:rgba(0,0,0,.55);
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{background:var(--desk);}
+  body{
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    color:var(--ink);
+    min-height:100dvh;
+    padding:clamp(16px,4vw,54px) 16px;
+    background:
+      radial-gradient(120% 90% at 50% -10%, rgba(255,255,255,.05), transparent 55%),
+      radial-gradient(140% 120% at 50% 120%, var(--desk-deep), transparent 60%),
+      var(--desk);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    -webkit-font-smoothing:antialiased;
+  }
+  .sheet{
+    position:relative;width:100%;max-width:520px;
+    background:
+      repeating-linear-gradient(0deg, transparent 0 27px, rgba(120,96,48,.035) 27px 28px),
+      radial-gradient(130% 100% at 50% 0%, var(--paper) 55%, var(--paper-lo) 100%);
+    border:1px solid var(--rule);border-radius:4px;
+    box-shadow:0 1px 0 rgba(255,255,255,.10) inset,
+               0 22px 50px -22px var(--shadow),
+               0 3px 10px -4px var(--shadow);
+    padding:clamp(30px,6vw,52px) clamp(24px,6vw,56px);
+    text-align:center;
+  }
+  .sheet::before{
+    content:"";position:absolute;inset:11px;
+    border:1px solid rgba(148,116,43,.34);
+    border:1px solid color-mix(in srgb, var(--gold) 34%, transparent);
+    border-radius:2px;pointer-events:none;
+  }
+  .seal{
+    width:58px;height:58px;border-radius:50%;
+    display:grid;place-items:center;margin:0 auto 14px;
+    color:#f4d9b0;font-size:1.5rem;
+    background:
+      radial-gradient(60% 55% at 38% 32%, var(--seal-hi), transparent 70%),
+      radial-gradient(120% 120% at 50% 120%, #4c1a15, var(--seal) 60%);
+    box-shadow:0 2px 6px -1px rgba(0,0,0,.5),
+               0 1px 1px rgba(255,255,255,.25) inset;
+    text-shadow:0 1px 1px rgba(0,0,0,.45);
+  }
+  .eyebrow{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,ui-sans-serif,sans-serif;
+    text-transform:uppercase;letter-spacing:.26em;
+    font-size:.62rem;font-weight:600;color:var(--ink-faint);
+    margin-bottom:4px;
+  }
+  h1{
+    font-size:clamp(1.7rem,5vw,2.3rem);
+    letter-spacing:.015em;line-height:1.05;text-wrap:balance;
+    font-weight:400;
+  }
+  h1 .amp{color:var(--gold);font-style:italic;}
+  .tag{
+    font-style:italic;color:var(--ink-soft);
+    margin:10px 0 26px;font-size:1.05rem;
+  }
+  .links{
+    display:flex;flex-direction:column;gap:10px;
+    max-width:300px;margin:0 auto;
+  }
+  .links a{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,ui-sans-serif,sans-serif;
+    font-weight:600;font-size:.95rem;
+    color:var(--gold);text-decoration:none;
+    background:var(--fill);
+    border:1px solid var(--rule);border-radius:3px;
+    padding:13px 18px;
+    transition:border-color .15s ease,color .15s ease;
+  }
+  .links a:hover{color:var(--gold-bright);border-color:var(--gold);}
+  .links a:focus-visible{outline:2px solid var(--gold-bright);outline-offset:2px;}
+  .fine{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,ui-sans-serif,sans-serif;
+    font-size:.7rem;letter-spacing:.03em;color:var(--ink-faint);
+    margin-top:28px;
+  }
+</style>
+</head>
+<body>
+  <main class="sheet">
+    <div class="seal" aria-hidden="true">★</div>
+    <div class="eyebrow">Svenson Games presents</div>
+    <h1>Hungry <span class="amp">for</span> Stars</h1>
+    <p class="tag">The tasting-menu tycoon.</p>
+    <nav class="links">
+      <a href="support.html">Player Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+    <div class="fine">© 2026 Svenson Games. All rights reserved.</div>
+  </main>
+</body>
+</html>
